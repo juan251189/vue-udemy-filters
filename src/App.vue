@@ -39,7 +39,8 @@
 
           <div class="col-3 col-sm-6 mb-5">
             <h2>Exercise 3</h2>
-            <p>{{txtReverseComp}}</p>
+            <p>{{exerciseone}}</p>
+            <p v-if="textInputTwo">{{exercisetwo}}</p>
           </div>
 
           <div class="col-3 col-sm-6 mb-5">
@@ -60,11 +61,12 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import List from './components/list.vue'
+import {exercisefour} from './exercise4'
 import {fruitMixin} from './fruitMixin'
 import {myownmixin} from './Myownmixin'
 
 export default {
-  mixins:[fruitMixin,myownmixin],
+  mixins:[fruitMixin,myownmixin,exercisefour],
 
   components: {
     HelloWorld,
@@ -91,7 +93,8 @@ export default {
 
       }
 
-    }
+    },
+
 
 
   }
